@@ -7,7 +7,7 @@
 ## General info:
 This is a simple page that shows how to use each tag and how to use the BEM convention. Additionally, JavaScript was used to create some simple interactions
  
-![Homepage website]("images/Animation.gif");
+![Homepage website](https://i.postimg.cc/cJ0pJVfy/Animation.gif);
 
 ## Technologies:
 * Semantic HTML;
