@@ -1,4 +1,8 @@
-console.log("Hello marynarze!");
+{
+  const welcome = () =>{
+    console.log("Hello marynarze!");
+  }
+
 let html = document.querySelector("html");
 let removeAll = document.querySelector(".js-article__button");
 let showContact = document.querySelector(".js-footer__button");
@@ -69,3 +73,5 @@ backgroundThemeChange.addEventListener("change", () => {
 
   }
 });
+welcome();
+}
