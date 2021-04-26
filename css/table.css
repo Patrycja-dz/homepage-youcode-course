@@ -1,0 +1,22 @@
+.table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.table__caption{
+    caption-side: bottom;
+    text-align: left;
+    margin-top: 10px;
+}
+.table__row:nth-child(odd) {
+    background-color: #C0C0C0;
+}
+.table__cell{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.table__header{
+    background-color: #496959;
+    color: #fff;
+}

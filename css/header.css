@@ -1,0 +1,16 @@
+.header {
+    color: #000;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.header__paragraph {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.header__image {
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 5px 6px 8px 0px #9a8787a8;
+}
