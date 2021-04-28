@@ -7,17 +7,17 @@
     const html = document.querySelector("html");
     const removeAll = document.querySelector(".js-article__button");
     removeAll.addEventListener("click", () => {
-      html.remove()
+      html.remove();
     })
   }
 
-  remove()
+  remove();
 
   const showOrHidden = () => {
     let showContact = document.querySelector(".js-footer__button");
     let contact = document.querySelector(".js-footer");
     showContact.addEventListener("click", () =>
-      contact.classList.toggle("footer--important")
+      contact.classList.toggle("footer--important");
     );
   }
 
@@ -43,7 +43,7 @@
         break;
       default:
         paragraphJS.paragraphJS = "Jeśli nic nie jesz to chyba jesteś z innej planety."
-        selectElement.addEventListener("change", (toggleTextContent))
+        selectElement.addEventListener("change", (toggleTextContent));
     }
 
 
@@ -95,5 +95,5 @@
     );
     welcome();
   }
-  init()
+  init();
 }
