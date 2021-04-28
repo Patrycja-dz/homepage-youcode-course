@@ -23,11 +23,11 @@
 
   showOrHidden();
 
-  const select = document.querySelector("select");
-  const paragraphJS = document.querySelector(".js-article__paragraph");
+  toggleTextContent = () => {
 
-  select.addEventListener("change", () => {
-    const choice = select.value;
+    const selectElement = document.querySelector("select");
+    const choice = selectElement.value;
+    const paragraphJS = document.querySelector(".js-article__paragraph");
     switch (choice) {
       case "little":
         paragraphJS.textContent = "Jeśli czujesz lekki głod, powinieneś zjeść tosty";
@@ -43,8 +43,16 @@
         break;
       default:
         paragraphJS.paragraphJS = "Jeśli nic nie jesz to chyba jesteś z innej planety."
+        selectElement.addEventListener("change", (toggleTextContent))
     }
-  });
+
+
+  }
+
+  toggleTextContent();
+
+
+
 
   const toggleBackground = () => {
     const backgroundThemeChange = document.querySelector(".js-article__select");
@@ -81,7 +89,7 @@
 
   }
   const init = () => {
-  const backgroundThemeChange = document.querySelector(".js-article__select");
+    const backgroundThemeChange = document.querySelector(".js-article__select");
     backgroundThemeChange.addEventListener("change", (toggleBackground)
 
     );
