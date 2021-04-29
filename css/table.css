@@ -2,6 +2,9 @@
     border-collapse: collapse;
     width: 100%;
 }
+.table--hidden{
+    display: none;
+}
 .table__caption{
     caption-side: bottom;
     text-align: left;
