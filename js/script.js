@@ -1,25 +1,34 @@
 {
   const welcome = () => {
     console.log("Hello marynarze!");
-  }
+  };
 
-  const remove = () => {
-    const html = document.querySelector("html");
-    const removeAll = document.querySelector(".js-article__button");
-    removeAll.addEventListener("click", () => {
-      html.remove();
-    })
-  }
+  const onChangeToggleTableOnClick = () => {
+    const toggleElement = document.querySelector(".js-table");
+    const toggleNextText = document.querySelector(".js-toggleText");
+    toggleElement.classList.toggle("table--hidden");
+    toggleNextText.innerText = toggleElement.classList.contains("table--hidden") ? "Pokaż" : "Ukryj";
 
-  remove();
+  };
+  const changeTableVisibility= () => {
+    const removeTableButton = document.querySelector(".js-article__button");
+    removeTableButton.addEventListener("click", onChangeToggleTableOnClick);
+    welcome();
+  };
+
+  changeTableVisibility();
 
   const showOrHidden = () => {
     let showContact = document.querySelector(".js-footer__button");
     let contact = document.querySelector(".js-footer");
-    showContact.addEventListener("click", () =>
+    showContact.addEventListener("click", () => {
       contact.classList.toggle("footer--important");
-    );
+    });
   }
+
+
+
+
 
   showOrHidden();
 
@@ -93,7 +102,7 @@
     backgroundThemeChange.addEventListener("change", (toggleBackground)
 
     );
-    welcome();
+
   }
   init();
 }
