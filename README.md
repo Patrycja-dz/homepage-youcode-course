@@ -10,9 +10,9 @@ This is a simple page that shows how to use each tag and how to use the BEM conv
 ![Homepage website](https://i.postimg.cc/cJ0pJVfy/Animation.gif);
 
 ## Technologies:
-* Semantic HTML;
-* BEM naming;
-* ES6 features
+* Semantic HTML
+* BEM naming
+* ES6+
 
 ## Usage
 Just click the link above
