@@ -10,7 +10,7 @@
     toggleNextText.innerText = toggleElement.classList.contains("table--hidden") ? "Pokaż" : "Ukryj";
 
   };
-  const changeTableVisibility= () => {
+  const changeTableVisibility = () => {
     const removeTableButton = document.querySelector(".js-article__button");
     removeTableButton.addEventListener("click", onChangeToggleTableOnClick);
     welcome();
@@ -18,19 +18,21 @@
 
   changeTableVisibility();
 
-  const showOrHidden = () => {
-    let showContact = document.querySelector(".js-footer__button");
-    let contact = document.querySelector(".js-footer");
-    showContact.addEventListener("click", () => {
-      contact.classList.toggle("footer--important");
-    });
-  }
+  const toggleFooterDisplay = () => {
+    const contact = document.querySelector(".js-footer");
+    const toggleTextInButton = document.querySelector(".js-toggleFooterText");
+    contact.classList.toggle("footer--hidden");
+    toggleTextInButton.innerText = contact.classList.contains("footer--hidden") ? "Pokaż" : "Ukryj";
 
+  };
 
+  const changeFooterDisplayOnClick = () => {
+    const showContactButton = document.querySelector(".js-footerHide__button");
+    showContactButton.addEventListener("click", toggleFooterDisplay);
+   
+  };
 
-
-
-  showOrHidden();
+  changeFooterDisplayOnClick();
 
   toggleTextContent = () => {
 
