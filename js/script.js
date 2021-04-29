@@ -29,35 +29,34 @@
   const changeFooterDisplayOnClick = () => {
     const showContactButton = document.querySelector(".js-footerHide__button");
     showContactButton.addEventListener("click", toggleFooterDisplay);
-   
+
   };
 
   changeFooterDisplayOnClick();
 
-  toggleTextContent = () => {
+  const toggleTextContent = () => {
 
     const selectElement = document.querySelector("select");
     const choice = selectElement.value;
-    const paragraphJS = document.querySelector(".js-article__paragraph");
+    const paragraph = document.querySelector(".js-article__paragraph");
     switch (choice) {
       case "little":
-        paragraphJS.textContent = "Jeśli czujesz lekki głod, powinieneś zjeść tosty";
-        break;
+        return paragraph.textContent = "Jeśli czujesz lekki głod, powinieneś zjeść tosty";
+
       case "average":
-        paragraphJS.textContent = "Jeśli jestes głodny zjedz Poki Bowl";
-        break;
+        return paragraph.textContent = "Jeśli jestes głodny zjedz Poki Bowl";
+
       case "very":
-        paragraphJS.textContent = "Jeśli jesteś bardzo głodny zjedz, kilka bajgli i sushi";
-        break;
+        return paragraph.textContent = "Jeśli jesteś bardzo głodny zjedz, kilka bajgli i sushi";
+
       case "unhungry":
-        paragraphJS.textContent = "Jeśli nie czujesz głodu zamknij lodówkę i idź na spacer";
-        break;
-      default:
-        paragraphJS.paragraphJS = "Jeśli nic nie jesz to chyba jesteś z innej planety."
-        selectElement.addEventListener("change", (toggleTextContent));
+        return paragraph.textContent = "Jeśli nie czujesz głodu zamknij lodówkę i idź na spacer";
+    };
+    const changeSelectValue = () => {
+      const select = document.querySelector("select");
+      select.addEventListener("change", (toggleTextContent));
     }
-
-
+    changeSelectValue();
   }
 
   toggleTextContent();
@@ -67,35 +66,35 @@
 
   const toggleBackground = () => {
     const backgroundThemeChange = document.querySelector(".js-article__select");
-    let newColors = backgroundThemeChange.value;
+    const newColors = backgroundThemeChange.value;
 
     switch (newColors) {
       case "#ffffff":
-        update("#ffffff", "#cc0033");
+        updateBackgroundColors("#ffffff", "#cc0033");
         break;
       case "#ee9c7e":
-        update("#ee9c7e", "#ffffff");
+        updateBackgroundColors("#ee9c7e", "#ffffff");
         break;
       case "#03254c":
-        update("#03254c", "#ffffff");
+        updateBackgroundColors("#03254c", "#ffffff");
         break;
       case "#000000":
-        update("#000000", "#00ffff");
+        updateBackgroundColors("#000000", "#00ffff");
         break;
       case "#cc0033":
-        update("#cc0033", "#ffffff");
+        updateBackgroundColors("#cc0033", "#ffffff");
         break;
       case "#ffc400":
-        update("#ffc400", "#ffffff");
+        updateBackgroundColors("#ffc400", "#ffffff");
         break;
       default:
         update("#ffffff", "#000000")
     }
 
   }
-  const update = (bgColor, textColor) => {
-    let body = document.querySelector(".js-body");
-    body.style.backgroundColor = bgColor;
+  const updateBackgroundColors = (backgroundColor, textColor) => {
+    const body = document.body
+    body.style.backgroundColor = backgroundColor;
     body.style.color = textColor;
 
   }
